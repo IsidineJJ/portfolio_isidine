@@ -1,0 +1,81 @@
+.tech-stack {
+  padding: 4px;
+  text-align: center;
+  background: linear-gradient(to right, #262649, #10212c);
+  font-size: 2.8rem;
+  font-weight: bold;
+  width: 100%;
+}
+.conteneur-contact {
+  max-width: 550px;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  padding: 3rem;
+  padding-bottom: 5rem;
+  border-radius: 35px;
+  box-shadow: rgba(88, 28, 135, 1) 1px 12px 19px -9px;
+}
+.conteneur-contact > p {
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(63, 63, 191, 1) 0%,
+    rgba(154, 233, 245, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+.box-contact {
+  padding: 0 3rem;
+}
+.input-box > input {
+  background-color: #2a2d3e;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(208, 206, 203);
+  border: none;
+}
+.input-box > input::placeholder {
+  font-size: 19px;
+  font-weight: 500;
+}
+.input-box > input:focus {
+  outline: 2px solid #a855f7;
+}
+.input-box {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+textarea {
+  background-color: #2a2d3e;
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(208, 206, 203);
+  margin-bottom: 20px;
+  resize: none;
+}
+textarea::placeholder {
+  font-size: 19px;
+  font-weight: 500;
+}
+textarea:focus {
+  outline: 2px solid #a855f7;
+}

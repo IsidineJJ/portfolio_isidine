@@ -1,0 +1,106 @@
+.conteneur{
+    background: linear-gradient(145deg, #191925, #1e1e2c);
+    display: flex;/*horizontal*/
+    flex-direction: column;/*en clonne*/
+    align-items: start;
+    padding: 25px;
+    border-radius: 16px;
+    gap: 12px;
+    position: relative;/*La définition des propriétés haut, droite, bas et gauche d'un élément positionné de manière relative entraînera son ajustement par rapport à sa position normale. Les autres éléments ne seront pas ajustés pour s'adapter à l'espace laissé par l'élément.*/
+    
+}
+img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+
+
+}
+.image-box1{
+    border: 1px solid rgb(103, 102, 104, 0.5);
+    border-radius: 12px;
+    padding: 10px;
+
+}
+.project-title{
+   font-size: 2rem ;
+   font-weight: bold;
+   margin: 0;
+}
+.project-description{
+    font-size: 1rem ;/*pour les font-size use rem et non em/px , c'est le mieux*/
+    font-weight: 500;
+    color: #61616c;  
+    margin: 0;
+}
+a{
+    all: unset;/*retirer tout ce qui a été mis par défaut sur le lien*/
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+.link-view{
+  background: linear-gradient(to right, #12c2e98f, #c471ed8f, #f163aa8f);
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+}
+.link-view:hover {/*pseudo-class*/
+  background: linear-gradient(to left, #12c2e98f, #c471ed8f, #f163aa8f);
+ border-radius: 12px;
+}
+.link-box{
+    background:linear-gradient(145deg, #191925, #1e1e2c);
+    padding: 12px;
+    border-radius: 12px;
+}
+.conteneur::before{/*pseudo-element*/
+    content: "" ;
+    background: linear-gradient(175deg,rgba(54, 87, 255, 1) 0%, rgba(84, 196, 131, 1) 50%, rgba(230, 212, 80, 1) 100%);
+    position: absolute;
+    inset: -2px ;/*pour la position dans le repère, c'est comme des coordonnées dans un repère orthonormmé avec haut et gauche négative ; bas et droite positive */
+    border-radius: inherit;
+    z-index: -50;/*pour faire passer le texte à l'arriere , généralement on utilise -50*/
+}
+.conteneur::after{
+    content: "" ;/*toujours mettre content pour que ça marche*/
+    background:linear-gradient(175deg,rgba(54, 87, 255, 1) 0%, rgba(84, 196, 131, 1) 50%, rgba(230, 212, 80, 1) 100%);
+    position: absolute;/*Un élément position: absolute;est positionné par rapport à l'ancêtre positionné le plus proche (au lieu d'être positionné par rapport à la fenêtre d'affichage, comme fixe).*/
+    inset: -2px ;
+    border-radius: inherit;
+    z-index: -50;/*propriété spécifie l'ordre de pile d'un élément.z-index fonctionne uniquement sur les éléments positionnés (position : absolue, position : relative, position : fixe ou position : collante) et les éléments flexibles (éléments qui sont des enfants directs des éléments display:flex ).*/
+    filter: blur(16px);
+    opacity: 0.5;
+}
+.conteneur:hover::after{/*pseudo-class*/
+    opacity: 0.8;
+}
+
+
+.section-2{
+
+}
+.section-title{
+  /*  background:linear-gradient(to right, #c084FC, #22d3ee);*/
+  padding: 4px;
+  text-align: center;
+  background:linear-gradient(to right, #262649, #10212c);
+  font-size: 2.8rem;
+  font-weight: bold;
+  width: 100%;
+}
+.project-grid{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 0 100px  ;
+    display: grid;
+    grid-template-columns/*La taille et le nombre de colonne dans la grille*/: repeat(auto-fit , minmax(290px,1fr/*fraction, prend une fraction de la grille */));
+    gap: 45px ;
+}
+.paragraph-sec2{
+    background: linear-gradient(90deg,rgba(63, 63, 191, 1) 0%, rgba(154, 233, 245, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
