@@ -53,27 +53,67 @@
   .section-title {
     font-size: 2rem; /* Ajuster la taille du titre de section */
   }
-}@media (max-width: 600px) {
+}
+/* --- Médias Query pour les mobiles (écrans <= 600px) --- */
+@media (max-width: 600px) {
   .conteneur-contact {
-    padding: 1.5rem; /* Réduire le padding */
-    margin-left: 20px;
-    margin-right: 20px;
+    /* Réduire le padding général du conteneur */
+    padding: 1.5rem; /* Ajusté pour laisser un peu d'espace */
+    padding-bottom: 2.5rem; /* Ajuster aussi le padding bas */
+    /* Assurer que le conteneur prend une bonne proportion de la largeur de l'écran */
+    margin-left: 15px; /* Petite marge sur les côtés */
+    margin-right: 15px;
+    width: auto; /* Permettre à la largeur de s'ajuster */
+    max-width: calc(100% - 30px); /* Assure qu'il ne déborde pas */
   }
+
   .conteneur-contact > p {
-    font-size: 2rem; /* Ajuster la taille du titre du formulaire */
+    font-size: 2rem; /* Réduire la taille du titre "Contactez-nous" */
     line-height: 35px;
+    margin-bottom: 20px; /* Ajuster la marge inférieure */
   }
+
+  .box-contact {
+    padding: 0 1rem; /* Réduire le padding sur les côtés pour la boîte externe */
+  }
+
   .input-box {
-    grid-template-columns: 1fr; /* Une seule colonne pour les inputs sur mobile */
-    gap: 15px;
+    /* Forcer une seule colonne pour les inputs sur mobile */
+    grid-template-columns: 1fr;
+    gap: 15px; /* Réduire l'espace entre les inputs */
   }
+
   .input-box > input,
   textarea {
-    padding: 12px; /* Réduire le padding des inputs et textarea */
+    /* Réduire la taille du padding et de la police pour les inputs et textarea */
+    padding: 12px;
     font-size: 16px;
   }
+
   .input-box > input::placeholder,
   textarea::placeholder {
     font-size: 16px;
   }
+
+  .link-view {
+    padding: 1px; /* Ajuster le padding du lien "Envoyer le message" */
+  }
+}
+
+/* --- Médias Query pour les petits écrans intermédiaires (ex: petites tablettes, entre 601px et 768px) --- */
+@media (min-width: 601px) and (max-width: 768px) {
+    .conteneur-contact {
+        padding: 2rem;
+        padding-bottom: 3.5rem;
+        margin-left: 30px;
+        margin-right: 30px;
+        max-width: calc(100% - 60px);
+    }
+    .conteneur-contact > p {
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+    .box-contact {
+        padding: 0 2rem;
+    }
 }
