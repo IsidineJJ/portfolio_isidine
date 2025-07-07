@@ -1,0 +1,79 @@
+/* Pour les écrans plus petits (ex: mobiles) */
+@media (max-width: 600px) {
+  .nav-box {
+    top: 10px; /* Réduire l'espace en haut */
+    max-width: 90%; /* Rendre la boîte un peu plus petite que l'écran */
+    padding: 0; /* Ajuster le padding */
+  }
+  .nav-conteneur {
+    flex-direction: column; /* Empiler les liens verticalement */
+    gap: 5px; /* Réduire l'espace entre les liens */
+    padding: 10px 0;
+  }
+  .nav-link {
+    padding: 8px 10px; /* Ajuster le padding des liens */
+    width: 100%; /* Occuper toute la largeur disponible */
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    font-size: 3rem; /* Réduire la taille du titre principal sur les petites tablettes */
+    line-height: 50px;
+  }
+  .ma-bio {
+    font-size: 0.9rem; /* Réduire la taille de la bio */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    font-size: 2.5rem; /* Réduire encore sur les mobiles */
+    line-height: 40px;
+  }
+  .Collaborons-box {
+    margin-left: 20px; /* Réduire les marges sur les mobiles */
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-grid {
+    padding: 0 50px; /* Réduire le padding sur les tablettes */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    padding: 0 20px; /* Réduire davantage sur les petites tablettes */
+    gap: 20px;
+  }
+  .section-title {
+    font-size: 2rem; /* Ajuster la taille du titre de section */
+  }
+}@media (max-width: 600px) {
+  .conteneur-contact {
+    padding: 1.5rem; /* Réduire le padding */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .conteneur-contact > p {
+    font-size: 2rem; /* Ajuster la taille du titre du formulaire */
+    line-height: 35px;
+  }
+  .input-box {
+    grid-template-columns: 1fr; /* Une seule colonne pour les inputs sur mobile */
+    gap: 15px;
+  }
+  .input-box > input,
+  textarea {
+    padding: 12px; /* Réduire le padding des inputs et textarea */
+    font-size: 16px;
+  }
+  .input-box > input::placeholder,
+  textarea::placeholder {
+    font-size: 16px;
+  }
+}
