@@ -68,7 +68,7 @@
   }
 
   .conteneur-contact > p {
-    font-size: 2rem; /* Réduire la taille du titre "Contactez-nous" */
+    font-size: 1rem; /* Réduire la taille du titre "Contactez-nous" */
     line-height: 35px;
     margin-bottom: 20px; /* Ajuster la marge inférieure */
   }
